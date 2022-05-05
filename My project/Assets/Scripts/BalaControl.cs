@@ -33,6 +33,7 @@ public class BalaControl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("choque");
         Destroy(gameObject);
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4914395361751982416}
   m_Layer: 0
   m_Name: Enemigo3
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad80f910849b7ae4e906a33834862890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 8
   deactivateTimer: 4
 --- !u!61 &4742085826618411661
 BoxCollider2D:

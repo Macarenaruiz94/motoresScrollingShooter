@@ -16,7 +16,7 @@ public class InstanciarEnemigos : MonoBehaviour
     void InstanciarEnemigo()
     {
         GameObject a = Instantiate(enemigos[Random.Range(0, enemigos.Length)]) as GameObject;
-        a.transform.position = new Vector2(screenBound.x * -2, Random.Range(-screenBound.y, screenBound.y));
+        a.transform.position = new Vector2(screenBound.x * 2, Random.Range(-screenBound.y, screenBound.y));
     }
 
     IEnumerator EnemigoWave()
