@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BalaControl : MonoBehaviour
+public class BalaEnemigo : MonoBehaviour
 {
     public float speed = 5f;
     public float deactivateTimer = 4f;
@@ -13,7 +13,7 @@ public class BalaControl : MonoBehaviour
         Invoke("DeactivateMainBala", deactivateTimer);
     }
 
-    
+
     void Update()
     {
         Move();
@@ -22,7 +22,7 @@ public class BalaControl : MonoBehaviour
     void Move()
     {
         Vector3 temp = transform.position;
-        temp.x += speed * Time.deltaTime;
+        temp.x -= speed * Time.deltaTime;
         transform.position = temp;
     }
 
