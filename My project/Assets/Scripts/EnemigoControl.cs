@@ -29,7 +29,7 @@ public class EnemigoControl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("MainBala"))
+        if (collision.gameObject.tag == "MainBala")
         {
             Health -= 1;
 
