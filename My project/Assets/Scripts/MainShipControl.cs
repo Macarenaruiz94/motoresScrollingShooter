@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainShipControl : MonoBehaviour
 {
@@ -78,6 +79,7 @@ public class MainShipControl : MonoBehaviour
             if (Health == 0)
             {
                 Destroy(gameObject);
+                SceneManager.LoadScene(3);
             }
         }
     }
