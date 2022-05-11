@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4053736612291786273}
   - component: {fileID: 1395870457340549009}
   - component: {fileID: 6092203194575994060}
-  - component: {fileID: 500892515727797690}
   - component: {fileID: 5327229215993333171}
   m_Layer: 0
   m_Name: BalaMainShip
@@ -95,7 +94,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.29090118, y: -0.0074589998}
@@ -111,27 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16114902, y: 0.35508338}
   m_EdgeRadius: 0
---- !u!50 &500892515727797690
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257866810298035502}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &5327229215993333171
 MonoBehaviour:
   m_ObjectHideFlags: 0

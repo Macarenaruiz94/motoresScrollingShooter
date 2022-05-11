@@ -31,6 +31,24 @@ public class BossControl : MonoBehaviour
     {
         Atacar();
 
+        Move();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("MainBala"))
+        {
+            Health -= 1;
+
+            if (Health == 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    private void Move()
+    {
         transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
@@ -43,19 +61,6 @@ public class BossControl : MonoBehaviour
             else
             {
                 waitTime -= Time.deltaTime;
-            }
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("MainBala"))
-        {
-            Health -= 1;
-
-            if (Health == 0)
-            {
-                Destroy(gameObject);
             }
         }
     }

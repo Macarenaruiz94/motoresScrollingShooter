@@ -27,9 +27,4 @@ public class InstanciarEnemigos : MonoBehaviour
             InstanciarEnemigo();
         }
     }
-    
-    void Update()
-    {
-        
-    }
 }

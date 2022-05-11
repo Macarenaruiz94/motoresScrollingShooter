@@ -6,6 +6,7 @@ public class MainShipControl : MonoBehaviour
 {
     public float speed = 5f;
     public float minY, maxY;
+    private int Health = 4;
 
     [SerializeField] private GameObject MainBala;
     [SerializeField] private Transform AtackPoint;
@@ -64,6 +65,19 @@ public class MainShipControl : MonoBehaviour
                 atackTimer = 0f;
 
                 Instantiate(MainBala, AtackPoint.position, AtackPoint.transform.rotation);
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "BalaEnemigo")
+        {
+            Health -= 1;
+
+            if (Health == 0)
+            {
+                Destroy(gameObject);
             }
         }
     }

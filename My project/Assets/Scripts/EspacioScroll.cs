@@ -12,12 +12,7 @@ public class EspacioScroll : MonoBehaviour
     {
         meshRenderer = GetComponent<MeshRenderer>();
     }
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         Scroll();
