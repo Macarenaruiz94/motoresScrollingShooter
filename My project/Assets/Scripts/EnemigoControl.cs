@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemigoControl : MonoBehaviour
 {
@@ -10,7 +12,9 @@ public class EnemigoControl : MonoBehaviour
     public float deactivateTimer = 4f;
     private float timeBtwShots;
     public float startTimeBtwShots;
+    private int puntos = 0;
 
+    [SerializeField] private Text puntosText;
     [SerializeField] private GameObject EnemigoBala;
     [SerializeField] private Transform AtackPoint;
 
@@ -36,6 +40,13 @@ public class EnemigoControl : MonoBehaviour
             if (Health == 0)
             {
                 Destroy(gameObject);
+                puntos++;
+                puntosText.text = "Puntos: " + puntos;
+
+                if (puntos == 10)
+                {
+                    SceneManager.LoadScene(1);
+                }
             }
         }
     }
