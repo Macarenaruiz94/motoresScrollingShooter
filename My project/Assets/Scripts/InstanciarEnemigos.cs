@@ -5,7 +5,7 @@ using UnityEngine;
 public class InstanciarEnemigos : MonoBehaviour
 {
     public GameObject[] enemigos;
-    public float instanciarTimer = 3f;
+    public float instanciarTimer = 4f;
     private Vector2 screenBound;
     void Start()
     {
