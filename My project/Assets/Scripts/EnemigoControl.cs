@@ -12,7 +12,7 @@ public class EnemigoControl : MonoBehaviour
     public float deactivateTimer = 4f;
     private float timeBtwShots;
     public float startTimeBtwShots;
-    private int puntos = 0;
+    static int puntos = 0;
 
     [SerializeField] private Text puntosText;
     [SerializeField] private GameObject EnemigoBala;
@@ -23,6 +23,7 @@ public class EnemigoControl : MonoBehaviour
         Invoke("DeactivateEnemigo", deactivateTimer);
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-speed, 0);
+        puntosText = GameObject.Find("puntosText").GetComponent<Text>();
     }
 
     
